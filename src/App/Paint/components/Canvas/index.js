@@ -7,7 +7,7 @@ import { ACTIONS } from '../../hooks/useSelectTool';
 const Canvas = () => {
   const canvasRef = useRef(null);
   const [context, setContext] = useState(null);
-  const state = useContext(StateContext);
+  const { tool, options } = useContext(StateContext);
   const dispatch = useContext(DispatchContext);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Canvas = () => {
       <canvas 
         width={window.innerWidth}
         height={window.innerHeight}
-        {...state.tool(canvasRef, context, state.options).bind}
+        {...tool(canvasRef, context, options).bind}
         ref={canvasRef}
       />
     </CANVAS>

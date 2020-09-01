@@ -12,6 +12,7 @@ const Toolbar = () => {
   const buttons = [
     {text: 'Pen', dispatch: () => dispatch({action: ACTIONS.PEN})},
     {text: 'Line', dispatch: () => dispatch({action: ACTIONS.LINE})},
+    {text: 'Rectangle', dispatch: () => dispatch({action: ACTIONS.RECTANGLE})},
     {text: 'Erase', dispatch: () => dispatch({action: ACTIONS.ERASE})},
     {text: 'Reset', dispatch: () => dispatch({action: ACTIONS.RESET})},
     {text: 'Black', dispatch: () => dispatch({action: ACTIONS.CHANGE_COLOR, color: '#000'})},

@@ -1,5 +1,6 @@
 import Pen from '../components/Canvas/tools/Pen';
 import Line from '../components/Canvas/tools/line';
+import Rectangle from '../components/Canvas/tools/rectangle';
 import Erase from '../components/Canvas/tools/erase';
 import resetCanvas from '../components/Canvas/tools/resetCanvas';
 
@@ -12,13 +13,14 @@ export const INITIALSTATE = {
 }
 
 export const ACTIONS = {
-  PEN: 'pen',
-  LINE: 'line',
-  ERASE: 'erase',
-  RESET: 'reset',
-  SET_CANVAS: 'set canvas',
-  CHANGE_COLOR: 'change color',
-  CHANGE_LINE_SIZE: 'change line',
+  PEN: 'PEN',
+  LINE: 'LINE',
+  RECTANGLE: 'RECTANGLE',
+  ERASE: 'ERASE',
+  RESET: 'RESET',
+  SET_CANVAS: 'SET CANVAS',
+  CHANGE_COLOR: 'CHANGE COLOR',
+  CHANGE_LINE_SIZE: 'CHANGE LINE',
 }
 
 const selectReducer = (state, payload) => {
@@ -29,6 +31,8 @@ const selectReducer = (state, payload) => {
       return {...state, tool: Pen };
     case ACTIONS.LINE:
       return {...state, tool: Line};
+    case ACTIONS.RECTANGLE:
+      return {...state, tool: Rectangle};
     case ACTIONS.ERASE:
       return {...state, tool: Erase};
     case ACTIONS.RESET: 
