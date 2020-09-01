@@ -5,7 +5,6 @@ const Erase = (canvasRef, context, options) => {
   //  const {} = options;
   let mouseDown = false;
   let offset = {left: 0, top: 0};
-  let start = {};
   let end = {};
 
   if(context) {
@@ -16,14 +15,12 @@ const Erase = (canvasRef, context, options) => {
   const onMouseDown = (e) => {
     mouseDown = true;
     offset = setOffset(canvasRef);
-    start = setCords(e, offset);
     end = setCords(e, offset);
 
     erase();
   }
 
   const onMouseMove = (e) => {
-    start = {...end};
     end = setCords(e, offset);
 
     if(mouseDown) {

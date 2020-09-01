@@ -1,7 +1,5 @@
 import setCords from './utils/setCords';
 import setOffset from './utils/setOffset';
-import getDiff from './utils/getDiff';
-import getSlope from './utils/getSlope';
 import distance from './utils/distance';
 
 const Circle = (canvasRef, context, options) => {
@@ -33,7 +31,6 @@ const Circle = (canvasRef, context, options) => {
 
   const onMouseUp = (e) => {
     mouseDown = false;
-    const result = getDiff(start, end);
     context.beginPath();
     context.strokeStyle = color;
     context.lineWidth = line_size;

@@ -1,7 +1,6 @@
 import setCords from './utils/setCords';
 import setOffset from './utils/setOffset';
 import getDiff from './utils/getDiff';
-import getSlope from './utils/getSlope';
 
 const Rectangle = (canvasRef, context, options) => {
   const { color, line_size } = options;

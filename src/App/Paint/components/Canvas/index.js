@@ -22,7 +22,7 @@ const Canvas = () => {
     dispatch({action: ACTIONS.SET_CANVAS, canvasRef, context});
 
 
-  }, [context])
+  }, [dispatch, context])
 
 
   return (
