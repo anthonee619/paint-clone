@@ -1,11 +1,8 @@
 import setCords from './utils/setCords';
 import setOffset from './utils/setOffset';
-import getSlope from './utils/getSlope';
-import getInverseSlope from './utils/getInverseSlope';
+import getPerpendicularSlope from './utils/givenSlopeCalcPerpendicularSlope';
 import getDistance from './utils/getDistance';
 import { Equilateral } from './utils/helperTriangle';
-
-import drawGrid from './utils/drawGrid';
 
 const { givenHeightCalcSide, givenSlopeAndDistanceCalcDelta } = Equilateral;
 
@@ -39,7 +36,7 @@ const Triangle = (canvasRef, context, options) => {
   const onMouseUp = (e) => {
     mouseDown = false;
     const distance = getDistance(start, end);
-    const slope = getInverseSlope(start, end);
+    const slope = getPerpendicularSlope(start, end);
     const sideLength = givenHeightCalcSide(distance);
     const { dx, dy } = givenSlopeAndDistanceCalcDelta(slope, sideLength/2);
     const left = { x: start.x - dx, y: start.y - dy };

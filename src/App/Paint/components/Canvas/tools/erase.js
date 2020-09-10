@@ -38,6 +38,7 @@ const Erase = (canvasRef, context, options) => {
     context.globalCompositeOperation="destination-out";
     context.arc(end.x,end.y,8,0,Math.PI*2,false);
     context.fill();
+    context.closePath();
   }
 
   return {

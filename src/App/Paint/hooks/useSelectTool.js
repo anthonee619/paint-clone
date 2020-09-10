@@ -25,6 +25,10 @@ export const ACTIONS = {
   SET_CANVAS: 'SET CANVAS',
   CHANGE_COLOR: 'CHANGE COLOR',
   CHANGE_LINE_SIZE: 'CHANGE LINE',
+  UNDO: 'UNDO',
+  REDO: 'REDO',
+  ADD_UNDO: 'ADD UNDO',
+  ADD_REDO: '',
 }
 
 const selectReducer = (state, payload) => {

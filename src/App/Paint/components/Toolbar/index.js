@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-
 import { DispatchContext } from '../../index';
 import { TOOLBAR } from './styles';
 
 import { ACTIONS } from '../../hooks/useSelectTool';
 
+import ColorPicker from './components/ColorPicker';
 
 const Toolbar = () => {
   const dispatch = useContext(DispatchContext);
@@ -27,7 +27,8 @@ const Toolbar = () => {
     <TOOLBAR 
       length={buttons.length}
     >
-      {buttons.map(({text, dispatch}) => <button key={text} onClick={dispatch}>{text}</button> )}
+      <ColorPicker />
+    {/* buttons.map(({text, dispatch}) => <button key={text} onClick={dispatch}>{text}</button> ) */}
     </TOOLBAR>
   )
 }
